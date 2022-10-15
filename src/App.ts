@@ -169,7 +169,7 @@ let sarah: Person = {
 // };
 
 interface Programmer extends Person {
-    // tu dziedziczenie
+  // tu dziedziczenie
   language: string;
   experience: number;
 }
@@ -191,3 +191,34 @@ let kevin: Programmer = {
 // };
 
 // 7. TYPOWANIE LIST
+
+let list: (number | string)[] = [1, 2, 3, 4, 5, 6, 7, 8];
+list = ["123", "321"];
+list = ["123", 123];
+
+const objList: Programmer[] = [
+  {
+    name: "Kevin",
+    surname: "Brown",
+    language: "Python",
+    experience: 4,
+    age: 27,
+  },
+  {
+    name: "John",
+    surname: "Brown",
+    age: 40,
+    language: "C++",
+    experience: 15,
+  },
+];
+
+const donald = {
+  name: "Donald",
+  surname: "Trump",
+  age: 70,
+  language: "Pascal",
+  experience: 30,
+};
+
+objList.push(donald);

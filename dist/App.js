@@ -92,3 +92,30 @@ let kevin = {
 //   age: "30",
 // };
 // 7. TYPOWANIE LIST
+let list = [1, 2, 3, 4, 5, 6, 7, 8];
+list = ["123", "321"];
+list = ["123", 123];
+const objList = [
+    {
+        name: "Kevin",
+        surname: "Brown",
+        language: "Python",
+        experience: 4,
+        age: 27,
+    },
+    {
+        name: "John",
+        surname: "Brown",
+        age: 40,
+        language: "C++",
+        experience: 15,
+    },
+];
+const donald = {
+    name: "Donald",
+    surname: "Trump",
+    age: 70,
+    language: "Pascal",
+    experience: 30,
+};
+objList.push(donald);
