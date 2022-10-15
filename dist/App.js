@@ -53,18 +53,42 @@ const categoryList = document.querySelector(".categories");
 const input = document.querySelector("#name");
 // console.log(input.value);
 const button = document.querySelector("button");
-// b) event listenery
-// button.addEventListener("click", (event: MouseEvent) => {
-//   console.log("Klik button");
-// });
-// Zad 2.
-// 1. Dodaj event listener na button (click)
-// 2. Wylosuj czy użytkownik ma zniżke czy nie (Math.random())
-// 3. Ściągnij wartość z inputu textowego, od razu zmień typ pozyskanej wartości na number
-// 4. Wykonaj console.log `You have to pay *wywołanie funkcji calculatePrice, argumenty to wartości z pkt 2 i 3, ${}`
-// TYPE INFERENCE
-button.addEventListener("click", function () {
-    const discount = Math.random() > 0.5 ? true : false;
-    const price = +input.value;
-    console.log(`You have to pay ${calculatePrice(price, discount)}`);
-});
+let test;
+let test2;
+let test3;
+let test4;
+let category;
+category = "sport";
+category = "life";
+// category = "gym";
+// category = 21;
+category = 23;
+let miesiac = 1;
+miesiac = 2;
+miesiac = 3;
+let john = {
+    name: "John",
+    surname: "Smith",
+    age: 30,
+    //married: false,
+};
+let sarah = {
+    name: "Sarah",
+    surname: "Smith",
+    age: 30,
+    married: true,
+};
+let kevin = {
+    name: "Kevin",
+    surname: "Brown",
+    age: 27,
+    language: "Python",
+    experience: 4,
+};
+// obj = 5
+// obj = {
+//   name: "Sarah",
+//   surname: "Smith",
+//   age: "30",
+// };
+// 7. TYPOWANIE LIST

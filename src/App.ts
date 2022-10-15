@@ -93,8 +93,101 @@ const button = document.querySelector("button");
 
 // TYPE INFERENCE
 
-button.addEventListener("click", function () {
-  const discount = Math.random() > 0.5 ? true : false;
-  const price = +input.value;
-  console.log(`You have to pay ${calculatePrice(price, discount)}`);
-});
+// button.addEventListener("click", function () {
+//   const discount = Math.random() > 0.5 ? true : false;
+//   const price = +input.value;
+//   console.log(`You have to pay ${calculatePrice(price, discount)}`);
+// });
+
+// 4. UNION TYPES
+
+// let test: boolean | number | string;
+// test = "test";
+// test = 21;
+// test = true;
+
+// 5. TYPE ALIAS
+
+type Test = string | number | boolean;
+
+let test: Test;
+let test2: Test;
+let test3: Test;
+let test4: Test;
+
+type Category = "sport" | "education" | "work" | "life" | 23;
+let category: Category;
+category = "sport";
+category = "life";
+// category = "gym";
+// category = 21;
+category = 23;
+// category = true;
+
+type Miesiace = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+
+let miesiac: Miesiace = 1;
+miesiac = 2;
+miesiac = 3;
+// miesiac = 13;
+// miesiac = 14;
+
+// 6. TYPOWANIE OBIEKTOW
+
+//type Person = { name: string; surname: string; age: number };
+
+interface Person {
+  name: string;
+  surname: string;
+  age: number;
+}
+
+interface Person {
+  married?: boolean;
+}
+
+let john: Person = {
+  name: "John",
+  surname: "Smith",
+  age: 30,
+  //married: false,
+};
+
+let sarah: Person = {
+  name: "Sarah",
+  surname: "Smith",
+  age: 30,
+  married: true,
+};
+
+//type Programmer = {
+//   name: string;
+//   surname: string;
+//   age: number;
+//   language: string;
+//   experience: number;
+// };
+
+interface Programmer extends Person {
+    // tu dziedziczenie
+  language: string;
+  experience: number;
+}
+
+let kevin: Programmer = {
+  name: "Kevin",
+  surname: "Brown",
+  age: 27,
+  language: "Python",
+  experience: 4,
+};
+
+// obj = 5
+
+// obj = {
+//   name: "Sarah",
+//   surname: "Smith",
+//   age: "30",
+// };
+
+// 7. TYPOWANIE LIST
